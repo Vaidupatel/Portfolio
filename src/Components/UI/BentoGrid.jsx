@@ -32,7 +32,7 @@ export const BentoGridItem = ({
   const handleCopy = () => {
     if (navigator.clipboard) {
       navigator.clipboard
-        .writeText("vaidu11@proton.me")
+        .writeText("vaidpatel11@gmail.com")
         .then(() => {
           setCopied(true);
           setTimeout(() => {
