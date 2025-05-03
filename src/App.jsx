@@ -17,7 +17,7 @@ function App() {
           <Hero />
           <Grid />
           <RecentProjects />
-          <Clients />
+          {/* <Clients /> */}
           <Experience />
           <Approach />
           <Footer />

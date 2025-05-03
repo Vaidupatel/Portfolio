@@ -27,7 +27,8 @@ export const PinContainer = ({
         ${containerClassName}`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      href={href || "/"}
+      href={href}
+      to={href === "It's Private" ? "" : href}
       target="_blank"
     >
       <div

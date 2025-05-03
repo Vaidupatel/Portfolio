@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./UI/movingBorder";
 import { workExperience } from "../assets/Data";
 
