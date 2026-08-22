@@ -1,26 +1,204 @@
 @import "tailwindcss";
 
+/* ──────────────────────────────────────────────
+   Design tokens — extracted from portfolio.pen
+   ────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --bg-canvas: #FAF8F2;
+  --bg-canvas-dark: #11110F;
+  --canvas-white: #FFFFFF;
+  --dark-surface: #1A1916;
+  --ink-900: #171714;
+  --ink-600: #55534D;
+  --ink-400: #8A877F;
+  --accent: #D97706;
+  --accent-deep: #B85C00;
+  --accent-soft: #F3E5D0;
+  --accent-ink: #FFFFFF;
+  --border-hairline: #E3DED2;
+  --success: #1A7F4E;
+  --error: #C0362C;
+
+  /* Spacing */
+  --section-padding-mobile: 96px;
+  --section-padding-desktop: 160px;
+  --gutter: 24px;
+  --card-padding: 32px;
+  --page-margin: 120px;
+
+  /* Radii */
+  --radius-card: 8px;
+  --radius-pill: 999px;
+
+  /* Sizes */
+  --content-width: 1200px;
+  --prose-width: 720px;
+  --nav-height: 72px;
+  --button-height: 48px;
+  --input-height: 52px;
+  --tag-height: 28px;
+
+  /* Type sizes */
+  --type-meta: 12px;
+  --type-xs: 14px;
+  --type-body: 17px;
+  --type-lead: 20px;
+  --type-card: 24px;
+  --type-h2: 28px;
+  --type-large: 40px;
+  --type-h1: 40px;
+  --type-section: 52px;
+  --type-display: 64px;
+  --type-hero: 72px;
+
+  /* Line heights */
+  --line-height-body: 1.6;
+  --line-height-display: 1.15;
 }
 
+/* ──────────────────────────────────────────────
+   Tailwind v4 @theme — maps CSS vars to utilities
+   ────────────────────────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-canvas: var(--bg-canvas);
+  --color-canvas-dark: var(--bg-canvas-dark);
+  --color-canvas-white: var(--canvas-white);
+  --color-dark-surface: var(--dark-surface);
+  --color-ink-900: var(--ink-900);
+  --color-ink-600: var(--ink-600);
+  --color-ink-400: var(--ink-400);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-hairline: var(--border-hairline);
+  --color-success: var(--success);
+  --color-error: var(--error);
+
+  /* Font families */
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+
+  /* Border radius */
+  --radius-card: var(--radius-card);
+  --radius-pill: var(--radius-pill);
+
+  /* Font sizes */
+  --font-size-meta: var(--type-meta);
+  --font-size-xs: var(--type-xs);
+  --font-size-body: var(--type-body);
+  --font-size-lead: var(--type-lead);
+  --font-size-card: var(--type-card);
+  --font-size-h2: var(--type-h2);
+  --font-size-large: var(--type-large);
+  --font-size-section: var(--type-section);
+  --font-size-display: var(--type-display);
+  --font-size-hero: var(--type-hero);
+
+  /* Line heights */
+  --line-height-body: var(--line-height-body);
+  --line-height-display: var(--line-height-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ──────────────────────────────────────────────
+   Base styles
+   ────────────────────────────────────────────── */
+body {
+  background: var(--bg-canvas);
+  color: var(--ink-900);
+  font-family: var(--font-body), 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+/* Scroll-reveal animation */
+@keyframes scroll-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.scroll-reveal {
+  animation: scroll-reveal 0.6s ease-out both;
+}
+
+/* Fade-in for mobile nav */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out both;
+}
+
+/* Prose styles for blog/about body text */
+.prose {
+  max-width: var(--prose-width);
+}
+
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: var(--type-h2);
+  font-weight: 700;
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+  color: var(--ink-900);
+  line-height: var(--line-height-display);
+}
+
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: var(--type-card);
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  color: var(--ink-900);
+}
+
+.prose p {
+  font-size: var(--type-body);
+  line-height: var(--line-height-body);
+  color: var(--ink-600);
+  margin-bottom: 1.25em;
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose ul, .prose ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.25em;
+}
+
+.prose li {
+  font-size: var(--type-body);
+  line-height: var(--line-height-body);
+  color: var(--ink-600);
+  margin-bottom: 0.5em;
+}
+
+.prose code {
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+  font-size: 0.9em;
+  background: var(--accent-soft);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25em;
+  font-style: italic;
+  color: var(--ink-600);
+  margin: 1.5em 0;
 }

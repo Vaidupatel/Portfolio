@@ -1,0 +1,35 @@
+# Vaidik Ghelani — Software Studio
+> https://vaidikghelani.com
+
+## About
+Vaidik Ghelani is an independent software studio based in Ahmedabad, Gujarat, India.
+Senior full-stack MERN & Next.js developer specializing in building serious digital products,
+AI chatbot/calling integrations, and SaaS MVPs.
+
+## Services
+1. MERN Stack Development — Custom high-performance web applications and dashboards built with MongoDB, Express.js, React, and Node.js.
+2. AI & Automation Integration — Conversational AI chatbots, voice calling agents, and automated workflow pipelines.
+3. SaaS MVP Development — Rapid, validation-focused product development to get your SaaS MVP to market in weeks.
+
+## Technologies
+React, Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, MongoDB, PostgreSQL,
+Redis, Firebase, Stripe, OpenAI API, Docker, Vercel, AWS
+
+## Selected Work
+- Fusion Water Tech (fusionwatertech.com) — Corporate website and admin management for water purification company
+- Voxup.ai (voxup.ai) — WhatsApp business marketing and automation platform with AI workflows
+- Parcel Diamonds (parceldiamonds.com) — Enterprise B2B diamond ecommerce platform
+- BizCivitas (bizcivitas.com) — Business engagement and networking ecosystem
+- 10Daile (10daile.com) — On-demand home services platform
+- Meeting Roomz (meetingroomz.com) — Unified conferencing and workspace booking platform
+- ArtLoop (getartloop.app) — Collaborative mobile drawing platform
+- Work Sangam (worksangam.com) — AI-powered recruitment platform
+- Satsang Seva (satsangseva.com) — Religious event booking and management platform
+- Infotech Realms (infotechsrealm.com) — Modern corporate platform
+- FaceSwap AI — AI-powered face swapping mobile application
+
+## Contact
+- Email: vaidpatel11@gmail.com
+- LinkedIn: https://linkedin.com/in/vaidpatel11
+- GitHub: https://github.com/Vaidupatel
+- Location: Ahmedabad, Gujarat, India (UTC+5:30)
