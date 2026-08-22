@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import { SectionHeader } from '../ui/section-header';
-import { Tag } from '../ui/tag';
 import { Button } from '../ui/button';
 
 export function AboutPreview() {

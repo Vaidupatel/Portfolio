@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from './constants';
+import { SITE_URL, SITE_NAME } from './constants';
 
 export function buildMetadata(
   title: string,

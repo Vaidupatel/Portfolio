@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 export async function GET(request: Request) {
   try {
@@ -19,55 +19,50 @@ export async function GET(request: Request) {
             justifyContent: 'center',
             backgroundColor: '#FAF8F2',
             padding: '80px',
-            fontFamily: 'sans-serif',
+            fontFamily: 'serif',
           }}
         >
-          {/* Logo Brandmark */}
           <div
             style={{
               display: 'flex',
               alignItems: 'center',
               gap: '12px',
-              marginBottom: '40px',
+              marginBottom: '32px',
             }}
           >
             <div
               style={{
-                width: '32px',
-                height: '32px',
+                width: '16px',
+                height: '16px',
+                borderRadius: '999px',
                 backgroundColor: '#D97706',
-                display: 'flex',
-                borderRadius: '6px',
               }}
             />
             <span
               style={{
                 fontSize: '20px',
-                fontWeight: 'bold',
+                fontWeight: 700,
                 color: '#171714',
-                letterSpacing: '1px',
+                letterSpacing: '-0.02em',
               }}
             >
-              VG / STUDIO
+              Vaidik Ghelani
             </span>
           </div>
 
-          {/* Heading */}
           <h1
             style={{
-              fontSize: '60px',
-              fontWeight: 'bold',
+              fontSize: '56px',
+              fontWeight: 800,
               color: '#171714',
-              lineHeight: 1.15,
-              letterSpacing: '-1.5px',
-              maxWidth: '960px',
-              margin: 0,
+              lineHeight: 1.1,
+              maxWidth: '900px',
+              letterSpacing: '-0.03em',
             }}
           >
             {title}
           </h1>
 
-          {/* Subtitle */}
           <p
             style={{
               fontSize: '24px',
@@ -84,7 +79,7 @@ export async function GET(request: Request) {
         height: 630,
       }
     );
-  } catch (e: any) {
+  } catch {
     return new Response(`Failed to generate the image`, {
       status: 500,
     });

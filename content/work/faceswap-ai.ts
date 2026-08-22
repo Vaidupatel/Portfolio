@@ -8,7 +8,7 @@ export const project: Project = {
   problem: "Deep learning face swap pipelines require high-bandwidth image uploads and slow, compute-heavy GPU processing, causing client timeouts.",
   approach: "Engineered an asynchronous task queuing pipeline using Node.js, Express, and Redis to process requests out-of-band and notify clients via webhooks.",
   stack: ["Node.js", "Express.js", "Redis", "MongoDB"],
-  outcome: "Handled up to 10,000 daily AI media processing tasks without API degradation.",
+  outcome: "A resilient background media pipeline that reliably processes compute-intensive image operations without client timeouts.",
   liveUrl: "https://play.google.com/store/apps/details?id=com.app.faceswap_ai",
   image: {
     src: "/FS.webp",

@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { projects } from '@/content/work';
 import { Tag } from '@/components/ui/tag';
 import { Eyebrow } from '@/components/ui/eyebrow';
-import { Button } from '@/components/ui/button';
 import { CTABand } from '@/components/ui/cta-band';
 import { buildMetadata, buildCaseStudyJsonLd } from '@/lib/metadata';
 import { SITE_URL } from '@/lib/constants';

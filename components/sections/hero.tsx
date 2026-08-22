@@ -1,6 +1,5 @@
 import { Button } from '../ui/button';
 import { Eyebrow } from '../ui/eyebrow';
-import Image from 'next/image';
 
 export function Hero() {
   return (
@@ -15,7 +14,7 @@ export function Hero() {
           A small, senior, technically excellent software studio specializing in MERN stack development, custom SaaS platforms, and conversational AI integrations.
         </p>
         <div className="flex flex-wrap gap-4 mt-2">
-          <Button variant="primary" href="/contact">Let's build</Button>
+          <Button variant="primary" href="/contact">Let&apos;s build</Button>
           <Button variant="secondary" href="/work">View work</Button>
         </div>
       </div>

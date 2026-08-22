@@ -8,7 +8,7 @@ export const project: Project = {
   problem: "High-value diamond transactions were managed via manual invoices and legacy messaging groups, resulting in security vulnerabilities, payment delays, and shipping friction.",
   approach: "Developed a secure, multi-role B2B ecommerce platform with end-to-end encryption, automated FedEx tracking integrations, and a custom Stripe payment flow.",
   stack: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Stripe"],
-  outcome: "Secured transactions over $1M within the first 6 months, reduced payment processing time by 80%, and automated FedEx shipping label generation.",
+  outcome: "A secure end-to-end B2B trading portal with automated shipping label generation and protected payment settlement.",
   liveUrl: "https://parceldiamonds.com/",
   image: {
     src: "/PD.png",

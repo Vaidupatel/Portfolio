@@ -37,7 +37,7 @@ export function Testimonial({
       
       {/* CTA action */}
       <div className="w-full md:w-auto flex-shrink-0 flex justify-end">
-        <Button variant="primary" href={ctaHref}>Let's build</Button>
+        <Button variant="primary" href={ctaHref}>Let&apos;s build</Button>
       </div>
     </div>
   );

@@ -1,0 +1,32 @@
+---
+title: "MERN vs Next.js for a SaaS product"
+slug: "mern-vs-nextjs-for-a-saas-product"
+category: "Architecture"
+publishedAt: "2026-08-10"
+readingTime: "8 min"
+authorName: "Vaidik Ghelani"
+authorRole: "Software Engineer"
+excerpt: "Choosing between a decoupled MERN stack and a full-stack Next.js App Router application depends on your indexing requirements, team boundaries, and background job architecture."
+---
+
+Choosing between a decoupled MERN stack (React SPA + Express/Node.js API) and a full-stack Next.js App Router application depends heavily on your indexing requirements, team boundaries, and background job architecture.
+
+## When Next.js App Router wins
+
+If your product requires public discovery, programmatic SEO landing pages, social media link unfurling, or low initial bundle footprints, Next.js is the clear choice.
+
+With React Server Components (RSC), database queries and data fetching can happen directly on the server without sending large client-side JavaScript bundles to the browser.
+
+- **Unified TypeScript Contracts:** Shared types between database models, server actions, and UI components.
+- **Fast Initial Page Loads:** Static generation (SSG) and server-side rendering (SSR) ensure search engines and users get pre-rendered HTML immediately.
+- **Streaming UI:** Suspense boundaries allow progressive rendering of complex dashboard widgets without blocking the entire page.
+
+## When decoupled MERN makes sense
+
+If your product is an internal operations tool, an authenticated real-time portal, or heavily relies on long-running background tasks, a standalone Express/Node.js server provides dedicated runtime control.
+
+- **Persistent WebSocket Connections:** Stateful socket connections often perform better on a dedicated Node server than in serverless function environments.
+- **Long-Running Compute Tasks:** Background batch processing, video transcoding queues, or PDF generation jobs that exceed standard serverless execution limits.
+- **Independent Scaling:** Scaling the backend API independently from the frontend CDN hosting layer.
+
+> Pick the architecture that reduces deployment and maintenance friction for your specific workload.

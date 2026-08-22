@@ -55,7 +55,7 @@ export function Nav() {
         </nav>
 
         <div className="hidden md:block">
-          <Button variant="primary" href="/contact">Let's talk</Button>
+          <Button variant="primary" href="/contact">Let&apos;s talk</Button>
         </div>
 
         {/* Mobile Toggle Button */}
@@ -82,7 +82,7 @@ export function Nav() {
             </Link>
           ))}
           <Button variant="primary" href="/contact" onClick={() => setIsOpen(false)} className="w-full mt-2">
-            Let's talk
+            Let&apos;s talk
           </Button>
         </div>
       )}

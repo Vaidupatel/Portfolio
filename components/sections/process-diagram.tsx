@@ -39,7 +39,7 @@ export function ProcessDiagram() {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-4 relative">
-        {steps.map((step, index) => (
+        {steps.map((step) => (
           <div key={step.number} className="flex flex-col gap-4 relative group">
             {/* Step Number */}
             <div className="font-mono text-xs font-bold text-accent tracking-wider flex items-center gap-3">

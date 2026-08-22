@@ -1,34 +1,34 @@
-"use client";
-
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { contactSchema, type ContactFormData } from "@/lib/validations";
-import { FormInput } from "@/components/ui/form-input";
-import { FormTextarea } from "@/components/ui/form-textarea";
-import { Button } from "@/components/ui/button";
+import type { Metadata } from "next";
+import { ContactForm } from "@/components/sections/contact-form";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { CONTACT_EMAIL, LINKEDIN_URL, GITHUB_URL, OFFICE_LOCATION, OFFICE_AVAILABILITY } from "@/lib/constants";
+import { buildMetadata, buildOrganizationJsonLd } from "@/lib/metadata";
+import {
+  CONTACT_EMAIL,
+  LINKEDIN_URL,
+  GITHUB_URL,
+  OFFICE_LOCATION,
+  OFFICE_AVAILABILITY,
+} from "@/lib/constants";
+
+export const metadata: Metadata = buildMetadata(
+  "Contact",
+  "Get in touch with Vaidik Ghelani to discuss full-stack MERN development, AI integrations, or custom web platform builds.",
+  "/contact"
+);
 
 export default function ContactPage() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
-  });
-
-  async function onSubmit(data: ContactFormData) {
-    // TODO: wire up to API route or email service
-    console.log("Contact form submitted:", data);
-    alert("Thanks for reaching out! I'll get back to you soon.");
-  }
-
   return (
     <div className="flex flex-col w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildOrganizationJsonLd()),
+        }}
+      />
+
       <section className="w-full py-16 md:py-24 max-w-[1200px] mx-auto px-5 md:px-10 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Contact form */}
+          {/* Contact form column */}
           <div className="lg:col-span-7 flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <Eyebrow>GET IN TOUCH</Eyebrow>
@@ -40,37 +40,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <FormInput
-                  label="Name"
-                  placeholder="Your name"
-                  error={errors.name?.message}
-                  {...register("name")}
-                />
-                <FormInput
-                  label="Email"
-                  type="email"
-                  placeholder="you@company.com"
-                  error={errors.email?.message}
-                  {...register("email")}
-                />
-              </div>
-              <FormInput
-                label="Company (optional)"
-                placeholder="Your company"
-                {...register("company")}
-              />
-              <FormTextarea
-                label="Message"
-                placeholder="Tell me about your project, timeline, and budget range..."
-                error={errors.message?.message}
-                {...register("message")}
-              />
-              <Button type="submit" variant="primary" className="self-start mt-2" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send message"}
-              </Button>
-            </form>
+            <ContactForm />
           </div>
 
           {/* Sidebar info */}
@@ -80,13 +50,26 @@ export default function ContactPage() {
                 CONTACT INFO
               </h3>
               <div className="flex flex-col gap-3 text-[14px]">
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-ink-900 hover:text-accent font-medium transition-colors">
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="text-ink-900 hover:text-accent font-medium transition-colors"
+                >
                   {CONTACT_EMAIL}
                 </a>
-                <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-ink-600 hover:text-accent transition-colors">
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ink-600 hover:text-accent transition-colors"
+                >
                   LinkedIn →
                 </a>
-                <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="text-ink-600 hover:text-accent transition-colors">
+                <a
+                  href={GITHUB_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ink-600 hover:text-accent transition-colors"
+                >
                   GitHub →
                 </a>
               </div>

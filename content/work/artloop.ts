@@ -8,7 +8,7 @@ export const project: Project = {
   problem: "Real-time drawing collaborations require low-latency synchronization and canvas state storage across web and mobile clients without lag.",
   approach: "Engineered a Node.js and WebSocket-driven backend coordination layer with Redis state caching to handle high-frequency vector draw path updates.",
   stack: ["Node.js", "Express.js", "Firebase", "MongoDB"],
-  outcome: "Successfully supported real-time multiplayer drawing rooms with sub-50ms draw latency.",
+  outcome: "Successfully supported real-time multiplayer drawing rooms with low-latency canvas synchronization.",
   liveUrl: "https://getartloop.app/",
   image: {
     src: "/AL.png",

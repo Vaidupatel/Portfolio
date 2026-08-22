@@ -8,7 +8,7 @@ export const project: Project = {
   problem: "Water treatment plants had manual tracking of purification metrics, leading to compliance lags and paper-based auditing errors.",
   approach: "Focus on the operator's field dashboard. Ensure offline capability for remote metrics logging and clean telemetry charts for quick auditing.",
   stack: ["React", "Node.js", "Express.js", "MongoDB"],
-  outcome: "A live telemetry dashboard at fusionwatertech.com. Automated compliance reports and reduced manual logging time by 60%.",
+  outcome: "A live telemetry dashboard at fusionwatertech.com that automated compliance reporting and eliminated manual logging friction for operators.",
   liveUrl: "https://www.fusionwatertech.com/",
   image: {
     src: "/FWT.png",
