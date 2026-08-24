@@ -1,7 +1,7 @@
 export const SITE_NAME = "Vaidik Ghelani";
 export const SITE_TITLE_TEMPLATE = "%s | Vaidik Ghelani";
 export const SITE_DESCRIPTION = "Senior full-stack MERN & Next.js software developer specializing in building serious digital products, AI chatbot/calling integrations, and SaaS MVPs.";
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://vaidikghelani.com";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio.ghelanivaidik.workers.dev";
 
 export const CONTACT_EMAIL = "vaidpatel11@gmail.com";
 export const GITHUB_URL = "https://github.com/Vaidupatel";
